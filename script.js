@@ -21,7 +21,7 @@ class Game {
     ctx.strokeRect(this.player.x,this.player.y,this.player.width,this.player.height)
   }
   move(){
-
+    this.player.x++
   }
 
   animate(timeStamp){
