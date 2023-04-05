@@ -20,7 +20,7 @@ class Game {
     this.player.draw(ctx)
   }
   move(){
-    this.player.x++
+    this.player.move()
   }
 
   animate(timeStamp){
