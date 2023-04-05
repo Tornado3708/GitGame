@@ -6,11 +6,9 @@ const ctx = canvas.getContext( "2d" )
 
 
 class Game {
-  time = {
-    delta: 0,
-    now: 0,
-    then: 0
-  }
+    delta = 0
+    now = 0
+    then = 0
   constructor(){
     this.player = new Player({x:100,y:100,width:80,height:160})
     this.animate(0)
@@ -25,7 +23,7 @@ class Game {
   }
 
   animate(timeStamp){
-    this.time.now = timeStamp
+    this.now = timeStamp
     console.log(timeStamp)
     this.draw()
     this.move()
