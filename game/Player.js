@@ -9,8 +9,10 @@ export default class Player extends Entity{
     super( {x,y,width,height} )
   }
   move(tick=0){
-    if( this.controls.key.indexOf( "w" ) > -1 ){
+    if( this.controls.key.indexOf( "d" ) > -1 ){
       this.speed.x++
+    }else if( this.controls.key.indexOf( "a" ) ){
+      this.speed.x--
     }
     this.x += this.speed.x * tick
     this.y += this.speed.y * tick
