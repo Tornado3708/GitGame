@@ -29,7 +29,7 @@ class Game {
     console.log(timeStamp)
     this.draw()
     this.move()
-    requestAnimationFrame(this.animate)
+    requestAnimationFrame(this.animate.bind(this))
   }
 
 }
