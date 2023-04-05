@@ -24,8 +24,8 @@ export default class Player extends Entity{
     this.x += this.speed.x * tick * 50
     this.y += this.speed.y * tick * 50
 
-    this.speed.x *= 0.9
-    this.speed.y *= 0.9
+    this.speed.x *= 0.95
+    this.speed.y *= 0.95
   }
   draw(ctx){
     ctx.strokeRect( this.x,this.y,this.width,this.height )
