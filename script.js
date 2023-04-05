@@ -1,4 +1,4 @@
-import Canvas from "./game/Canvas.js"
+import Canvas from "./game/tools/Canvas.js"
 import Player from "./game/Player.js"
 
 const canvas = new Canvas({width:1920,height:1080,id:"canvas1"})
