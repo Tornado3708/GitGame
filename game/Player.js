@@ -14,8 +14,18 @@ export default class Player extends Entity{
     }else if( this.controls.key.indexOf( "a" ) > -1 ){
       this.speed.x--
     }
-    this.x += this.speed.x * tick
-    this.y += this.speed.y * tick
+
+    if( this.controls.key.indexOf( "s" ) > -1 ){
+      this.speed.y++
+    }else if( this.controls.key.indexOf( "w" ) > -1 ){
+      this.speed.y--
+    }
+
+    this.x += this.speed.x * tick * 50
+    this.y += this.speed.y * tick * 50
+
+    this.speed.x *= 0.9
+    this.speed.y *= 0.9
   }
   draw(ctx){
     ctx.strokeRect( this.x,this.y,this.width,this.height )

@@ -11,5 +11,6 @@ export default class Canvas{
   getContext( id ){
     return this.cnv.getContext( id )
   }
-
+  get width(){ return this.cnv.width }
+  get height(){ return this.cnv.height }
 }
