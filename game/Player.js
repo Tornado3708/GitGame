@@ -7,8 +7,9 @@ export default class Player extends Entity{
   constructor({x,y,width,height}){
     super( {x,y,width,height} )
   }
-  move(){
+  move(tick=0){
     this.x++
+    this.y++
   }
   draw(ctx){
     ctx.strokeRect( this.x,this.y,this.width,this.height )

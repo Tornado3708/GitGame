@@ -9,7 +9,7 @@ class Game {
     delta = 0
     now = 0
     then = 0
-    fpsInterval = 1000
+    fpsInterval = 100
   constructor(){
     this.player = new Player({x:100,y:100,width:80,height:160})
     this.animate(0)
