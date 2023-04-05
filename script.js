@@ -1,2 +1,12 @@
 const canvas = document.getElementById( "canvas1" )
-canvas.style.background = "red"
+const ctx = canvas.getContext("2d")
+
+
+class Game{
+  constructor(){
+    
+  }
+}
+
+
+let game = new Game()
