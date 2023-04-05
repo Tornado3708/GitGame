@@ -7,6 +7,7 @@ export default class Controls{
     window.addEventListener( "keydown", e => {
       if( this.key.indexOf( e.key === -1 )){
         this.key.push( e.key )
+        console.log( this.key )
       }
     } )
   }
