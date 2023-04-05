@@ -9,6 +9,7 @@ class Game {
     delta = 0
     now = 0
     then = 0
+    fpsIterval = 1000
   constructor(){
     this.player = new Player({x:100,y:100,width:80,height:160})
     this.animate(0)
@@ -24,9 +25,13 @@ class Game {
 
   animate(timeStamp){
     this.now = timeStamp
+    this.delta = this.now - this.then
     console.log(timeStamp)
-    this.draw()
-    this.move()
+    if(this.delta > this.fpsInterval){
+      this.draw()
+      this.move()
+    }
+    
     requestAnimationFrame(this.animate.bind(this))
   }
 
