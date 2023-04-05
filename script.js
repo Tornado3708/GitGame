@@ -9,8 +9,10 @@ class Game {
     delta = 0
     now = 0
     then = 0
-    fpsInterval = 100
-  constructor(){
+    fpsInterval = 1_000
+  constructor(fps=30){
+    this.fps = fps
+    this.fpsInterval = 1000/this.fps
     this.player = new Player({x:100,y:100,width:80,height:160})
     this.animate(0)
   }
@@ -40,5 +42,5 @@ class Game {
 }
 
 
-let game = new Game()
+let game = new Game(60)
 window.game = game
