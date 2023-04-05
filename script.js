@@ -30,6 +30,8 @@ class Game {
     if(this.delta > this.fpsInterval){
       this.draw()
       this.move()
+      this.then = this.now
+      this.delta %= this.fpsIterval
     }
     
     requestAnimationFrame(this.animate.bind(this))

@@ -1,4 +1,6 @@
 import Entity from "./super/Entity.js";
+import Controls from "./Controls.js";
+
 
 export default class Player extends Entity{
   controls = new Controls()
