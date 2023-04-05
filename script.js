@@ -22,7 +22,8 @@ class Game {
     this.player.draw(ctx)
   }
   move(){
-    this.player.move()
+    const tick = this.fpsInterval / 1000
+    this.player.move(tick)
   }
 
   animate(timeStamp){
