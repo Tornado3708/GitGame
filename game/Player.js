@@ -11,7 +11,7 @@ export default class Player extends Entity{
   move(tick=0){
     if( this.controls.key.indexOf( "d" ) > -1 ){
       this.speed.x++
-    }else if( this.controls.key.indexOf( "a" ) ){
+    }else if( this.controls.key.indexOf( "a" ) > -1 ){
       this.speed.x--
     }
     this.x += this.speed.x * tick
