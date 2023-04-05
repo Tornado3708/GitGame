@@ -26,6 +26,7 @@ class Game {
 
   animate(timeStamp){
     this.time.now = timeStamp
+    console.log(timeStamp)
     this.draw()
     this.move()
     setTimeout(this.animate,1000)
