@@ -29,7 +29,7 @@ class Game {
     console.log(timeStamp)
     this.draw()
     this.move()
-    setTimeout(this.animate,1000)
+    requestAnimationFrame(this.animate.bind( this ))
   }
 
 }
