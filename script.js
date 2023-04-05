@@ -6,9 +6,31 @@ const ctx = canvas.getContext( "2d" )
 
 
 class Game {
+  time = {
+    delta: 0,
+    now: 0,
+    then: 0
+  }
   constructor(){
     this.player = new Player({x:100,y:100,width:80,height:160})
+    this.animate(0)
   }
+
+  draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height)
+    ctx.strokeRect(this.player.x,this.player.y,this.player.width,this.player.height)
+  }
+  move(){
+
+  }
+
+  animate(timeStamp){
+    this.time.now = timeStamp
+    this.draw()
+    this.move()
+    setTimeout(this.animate,1000)
+  }
+
 }
 
 

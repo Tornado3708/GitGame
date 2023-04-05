@@ -7,4 +7,9 @@ BODY{
 }
 #canvas1{
   background: #0047ab;
+  position: fixed;
+  top:50%;
+  left:50%;
+  max-width: 100%;
+  max-height: 100%;
 }
