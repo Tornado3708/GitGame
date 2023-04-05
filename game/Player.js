@@ -7,6 +7,10 @@ export default class Player extends Entity{
   constructor({x,y,width,height}){
     super( {x,y,width,height} )
   }
-  move(){}
-  draw(){}
+  move(){
+
+  }
+  draw(ctx){
+    ctx.fillRect( this.x,this.y,this.width,this.height )
+  }
 }

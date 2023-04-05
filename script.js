@@ -17,7 +17,7 @@ class Game {
 
   draw(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
-    ctx.strokeRect(this.player.x,this.player.y,this.player.width,this.player.height)
+    this.player.draw(ctx)
   }
   move(){
     this.player.x++
